@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pra Sempre Vou Te Amar</title>
+    <!-- Carrega o Tailwind CSS para estilização e responsividade -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carrega a fonte 'Great Vibes' (cursiva) do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Define a fonte cursiva para o título */
+        .font-great-vibes {
+            font-family: 'Great Vibes', cursive;
+        }
+        /* Define a cor de fundo roxa escura (deep-purple) */
+        .deep-purple {
+            background-color: #4A148C; /* Um roxo profundo */
+        }
+        /* Define a fonte Inter como padrão para o restante do texto */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Define uma animação de pulso suave para os botões */
+        @keyframes pulse-once {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .animate-pulse-once {
+            animation: pulse-once 0.3s ease-in-out;
+        }
+        /* Responsividade para o iFrame do YouTube */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.75rem; /* rounded-xl do Tailwind */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="deep-purple min-h-screen flex items-start sm:items-center justify-center p-4">
+
+    <!-- Container Principal Centrado -->
+    <div id="main-content" class="w-full max-w-4xl mx-auto py-8 transition-opacity duration-1000">
+
+        <!-- Título Principal -->
+        <h1 class="font-great-vibes text-white text-4xl sm:text-6xl text-center mb-10 leading-snug">
+            pra sempre vou te amar
+        </h1>
+
+        <!-- Seção de Abertura (Q1: Amará pra sempre?) - Visível Inicialmente -->
+        <div id="question-1-section" class="bg-fuchsia-800/80 p-6 sm:p-10 rounded-xl shadow-2xl transition-all duration-500">
+            <h2 class="text-white text-xl sm:text-3xl font-bold text-center mb-6">
+                Você me amará pra sempre?
+            </h2>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <!-- Botão SIM -->
+                <button
+                    onclick="handleQ1Yes()"
+                    class="bg-pink-400 hover:bg-pink-300 text-white font-extrabold py-4 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 active:scale-95 text-lg sm:text-xl flex items-center justify-center min-w-40 focus:outline-none focus:ring-4 focus:ring-pink-300"
+                    aria-label="Responder Sim"
+                >
+                    SIM &nbsp; ❤️
+                </button>
+
+                <!-- Botão NÃO -->
+                <button
+                    onclick="handleQ1No()"
+                    class="bg-gray-400 hover:bg-gray-500 text-white font-extrabold py-4 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 active:scale-95 text-lg sm:text-xl flex items-center justify-center min-w-40 focus:outline-none focus:ring-4 focus:ring-gray-300"
+                    aria-label="Responder Não"
+                >
+                    NÃO &nbsp; 💔
+                </button>
+            </div>
+        </div>
+
+        <!-- Conteúdo do Pedido (Mensagem, Vídeo e Perguntas Sequenciais) - Inicialmente Oculto -->
+        <div id="proposal-flow-content" class="mt-8 hidden opacity-0 transition-opacity duration-1000">
+            <div class="bg-white text-fuchsia-900 p-6 sm:p-10 rounded-xl shadow-2xl">
+                <!-- Mensagem Original (COMPLETA) -->
+                <p class="whitespace-pre-wrap text-base sm:text-lg leading-relaxed text-justify">
+                    Desde que o dia 21 de novembro chegou, cada nascer do sol tem tido um sabor diferente, um silêncio que ecoa mais alto do que qualquer ruído. Este nosso "tempo", que se estenderá até 21 de dezembro — um mês de reflexão, de respirar fundo e de tentar entender onde nos perdemos no caminho — parece, para mim, uma eternidade. Eu sei que foi necessário, que precisávamos de espaço para enxergar com clareza o que está nos afastando, mas a verdade é que, a cada dia que passa, a distância física do nosso namoro se torna infinitamente menor do que a dor de não ter você por perto, mesmo que seja só em pensamento.
+
+                    A ideia de te escrever veio da necessidade urgente de extravasar o amor que insiste em transbordar. Decidi que não posso esperar o dia 21 do próximo mês para te dizer o que o meu coração tem gritado: Eu amo você, incondicionalmente, e sinto uma falta esmagadora de tudo o que você é.
+
+                    Neste período de silêncio forçado, é inevitável revisitar cada momento nosso. A tela do celular se tornou um portal mágico que, mesmo não te mostrando fisicamente, guarda as lembranças dos seus olhos brilhantes, do seu sorriso que ilumina meu dia, e daquela gargalhada gostosa que desarma qualquer mau humor. Lembro-me da emoção no peito no dia em que nossos olhares se cruzaram pela primeira vez, mesmo que a quilômetros de distância. Você transformou minha vida, trouxe cor e uma paixão avassaladora que eu nem sabia ser capaz de sentir. Você me ensinou a amar uma mulher de uma forma tão profunda e completa que me faz sentir a pessoa mais sortuda deste universo. Você é a poesia que faltava na minha história, a melodia que embala meus sonhos.
+
+                    E sim, eu sinto falta das brigas. Parece loucura, eu sei. Mas sinto falta do nosso jeito de nos perdermos e, principalmente, do nosso jeito de nos reencontrarmos. Sinto falta da intensidade do debate, seguida pela doçura do pedido de desculpas, do abraço apertado através da câmera, do "eu te amo" murmurado que sela a paz e nos lembra que, por mais que discordemos, o amor que sentimos é a âncora que nos mantém unidas. As brigas eram ruídos no nosso amor, mas o silêncio de agora é um buraco que não para de crescer.
+
+                    Você não tem ideia do quanto sua voz faz falta na minha rotina. Acordar sem a sua mensagem de bom dia, passar o dia sem o áudio inesperado, ir dormir sem ouvir sua voz me desejando boa noite é como se o meu mundo tivesse perdido a trilha sonora. A sua voz tem o poder de me acalmar, de me fazer rir nos piores momentos, de me dar a força que eu preciso para enfrentar o mundo. É o meu porto seguro, meu aconchego sonoro em meio à agitação do dia a dia.
+
+                    Olhando para trás, para tudo que construímos, para cada quilômetro que desafiamos e cada obstáculo que superamos, eu tenho uma certeza inabalável: você é a mulher da minha vida. É com você que eu quero planejar o futuro, é em você que eu enxergo a força e a beleza que me inspiram, é ao seu lado que eu quero envelhecer, dividindo risadas e histórias. Não existe incerteza nisso. A confusão atual é apenas uma névoa que precisa ser dissipada, e não o fim de um caminho que eu sei que é nosso.
+
+                    Eu daria tudo para que esta pausa não fosse necessária. Queria ter a sabedoria para ter evitado as discussões, a paciência para ter entendido melhor seus sentimentos, a leveza para não ter deixado o peso da distância nos sufocar. Mas já que estamos aqui, quero usar este tempo para me reencontrar e, acima de tudo, para reafirmar o meu compromisso com o nosso amor.
+
+                    Pense em tudo de bom que vivemos. Pense no calor do nosso afeto, na parceria inquebrável, na cumplicidade que nos une. Pense em como, mesmo distantes, conseguimos construir um lar uma na outra.
+
+                    Saiba que, a cada dia, o meu amor por você só aumenta. Eu te admiro pela sua força, pela sua inteligência, pelo seu coração gigante e pela forma única como você me ama. Espero, do fundo da minha alma, que você também esteja usando este tempo para lembrar que, por baixo das desavenças, existe um amor puro e gigante.
+
+                    Estou contando os dias para o 21 de dezembro, esperando que ele traga a clareza e a certeza de que o nosso lugar é juntas. Até lá, meu amor, cuide-se, pense em nós e saiba que, mesmo em silêncio, meu coração continua a bater no ritmo do seu.
+                    <br><br>
+                    Com todo o meu amor e uma saudade que aperta,
+                    <br>
+                    <strong>Sua para sempre. 💖</strong>
+                </p>
+
+                <!-- Vídeo Incorporado do YouTube (Com parâmetros para evitar redirecionamento) -->
+                <div class="mt-8 mb-8 text-center">
+                    <h3 class="text-xl font-bold mb-4 text-fuchsia-900">Nossa Música</h3>
+                    <div class="video-container shadow-xl">
+                        <!-- O vídeo será incorporado aqui (Ana Carolina - Eu Sei Que Vou Te Amar) -->
+                        <iframe 
+                            src="https://www.youtube.com/embed/T_9Iqb07XvU?autoplay=0&controls=1&modestbranding=1&rel=0" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Q2: Viver tudo isso comigo? (Visível após Q1 "Sim") -->
+                <div id="question-2-section" class="pt-6 border-t border-fuchsia-200">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-fuchsia-800">
+                        Está pronta pra viver tudo isso comigo?
+                    </h3>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <button onclick="handleQ2Yes()" class="btn-primary">SIM, CLARO!</button>
+                        <button onclick="handleQ2No()" class="btn-secondary">NÃO, VAMOS CALMA</button>
+                    </div>
+                </div>
+
+                <!-- Q3: Construir uma família maior? (Inicialmente Oculto) -->
+                <div id="question-3-section" class="pt-6 border-t border-fuchsia-200 mt-6 hidden opacity-0 transition-opacity duration-500">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-fuchsia-800">
+                        Quer construir uma família maior comigo?
+                    </h3>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <button onclick="handleQ3Yes()" class="btn-primary">
+                            Sim, quero mais uns 3 filhos e vários pets! 🐾
+                        </button>
+                        <button onclick="handleQ3No()" class="btn-secondary">
+                            Não, só o que já temos tá bom. ❤️
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Q4: Gostaria de se casar comigo? (Inicialmente Oculto) -->
+                <div id="question-4-section" class="pt-6 border-t border-fuchsia-200 mt-6 hidden opacity-0 transition-opacity duration-500">
+                    <h3 class="text-3xl font-bold text-center mb-8 text-pink-700">
+                        Meu Amor, Gostaria de se casar comigo? 💍
+                    </h3>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <button onclick="handleQ4Yes()" class="btn-primary text-2xl py-5">SIM!</button>
+                        <button onclick="handleQ4No()" class="btn-secondary text-2xl py-5">NÃO...</button>
+                    </div>
+                </div>
+                
+                <!-- Votos e Envio para WhatsApp (Inicialmente Oculto) -->
+                <div id="vows-form-section" class="pt-6 border-t border-fuchsia-200 mt-6 hidden opacity-0 transition-opacity duration-500">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-green-700">EU TE AMO!</h3>
+                    <p class="text-center text-gray-600 mb-6">Que honra! Agora, escreva o seu voto de aceitação abaixo (máx. 300 palavras).</p>
+                    
+                    <label for="vows-textarea" class="block text-lg font-medium text-fuchsia-900 mb-2">Escreva seus votos:</label>
+                    <textarea 
+                        id="vows-textarea" 
+                        rows="8" 
+                        maxlength="2000"
+                        class="w-full p-4 border-2 border-pink-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 text-gray-800 resize-none shadow-inner" 
+                        placeholder="Escreva aqui seu lindo 'Sim' e seus votos..."
+                    ></textarea>
+                    
+                    <p class="text-right text-xs text-gray-500 mt-1">Limite de caracteres recomendado: ~300 palavras (2000 caracteres).</p>
+
+                    <button
+                        onclick="sendVows()"
+                        class="bg-green-600 hover:bg-green-700 text-white font-extrabold py-4 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 active:scale-95 text-lg flex items-center justify-center mx-auto mt-6 w-full sm:w-auto focus:outline-none focus:ring-4 focus:ring-green-300"
+                        aria-label="Enviar Votos por WhatsApp"
+                    >
+                        💌 Enviar Votos (WhatsApp)
+                    </button>
+                    <!-- Aviso de WhatsApp agora SEMPRE visível -->
+                    <p id="email-warning" class="text-center text-sm font-bold text-red-600 mt-3">
+                        *ATENÇÃO: Após clicar, o **WhatsApp será aberto**. Você precisará apertar o botão ENVIAR lá!*
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Resposta "NÃO" (Inicialmente Oculto) -->
+    <div id="modal-nao" class="fixed inset-0 deep-purple bg-opacity-75 hidden flex items-center justify-center p-4 z-50 transition-opacity duration-300">
+        <div class="bg-pink-100 p-8 rounded-xl shadow-2xl max-w-sm w-full text-center transform scale-100 transition-transform duration-300">
+            <!-- Conteúdo dinâmico do modal -->
+            <p id="modal-emoji" class="text-4xl mb-4">😭</p>
+            <h3 id="modal-title" class="text-2xl font-bold text-fuchsia-900 mb-4">Tem certeza?</h3>
+            <p id="modal-body" class="text-gray-700 mb-6">Por favor, pense de novo e tente a resposta certa! Meu coração apertou!</p>
+            <button
+                onclick="closeModal()"
+                class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105"
+            >
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const q1Section = document.getElementById('question-1-section');
+        const flowContent = document.getElementById('proposal-flow-content');
+        const q2Section = document.getElementById('question-2-section');
+        const q3Section = document.getElementById('question-3-section');
+        const q4Section = document.getElementById('question-4-section');
+        const vowsFormSection = document.getElementById('vows-form-section');
+        const vowsTextarea = document.getElementById('vows-textarea');
+        const modalNao = document.getElementById('modal-nao');
+        
+        // 🚀 SEU NÚMERO DE WHATSAPP ATUALIZADO (País: 55, DDD: 92)
+        const whatsappNumber = '5592994892079'; 
+
+
+        // Helper para o estilo dos botões
+        const styleButtons = () => {
+             const buttons = document.querySelectorAll('button');
+             buttons.forEach(btn => {
+                if (btn.classList.contains('btn-primary')) {
+                    btn.className = 'btn-primary bg-pink-400 hover:bg-pink-300 text-white font-extrabold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 active:scale-95 text-lg focus:outline-none focus:ring-4 focus:ring-pink-300 w-full';
+                } else if (btn.classList.contains('btn-secondary')) {
+                    btn.className = 'btn-secondary bg-gray-400 hover:bg-gray-500 text-white font-extrabold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 active:scale-95 text-lg focus:outline-none focus:ring-4 focus:ring-gray-300 w-full';
+                }
+            });
+        };
+        document.addEventListener('DOMContentLoaded', styleButtons);
+
+
+        // --- Funções de Fluxo ---
+
+        /**
+         * Q1: Amará pra sempre?
+         */
+        function handleQ1Yes() {
+            // Oculta Q1
+            q1Section.classList.add('opacity-0');
+            setTimeout(() => {
+                q1Section.classList.add('hidden');
+                
+                // Exibe o fluxo de proposta
+                flowContent.classList.remove('hidden');
+                flowContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                setTimeout(() => {
+                    flowContent.classList.remove('opacity-0');
+                    // Garante que apenas Q2 esteja visível inicialmente
+                    q3Section.classList.add('hidden', 'opacity-0');
+                    q4Section.classList.add('hidden', 'opacity-0');
+                    vowsFormSection.classList.add('hidden', 'opacity-0');
+                }, 50); 
+            }, 300);
+        }
+
+        function handleQ1No() {
+            showModal("😭", "Tem certeza?", "Por favor, pense de novo e tente a resposta certa! Meu coração apertou!");
+        }
+
+        /**
+         * Q2: Viver tudo isso comigo?
+         */
+        function handleQ2Yes() {
+            // Oculta Q2
+            q2Section.classList.add('opacity-0');
+            setTimeout(() => {
+                q2Section.classList.add('hidden');
+                // Exibe Q3
+                showNextQuestion(q3Section);
+            }, 300);
+        }
+
+        function handleQ2No() {
+            // Mensagem mais gentil, mas segue o fluxo para a próxima pergunta
+            showModal("😟", "Calma lá...", "Tudo bem, vamos devagar! Mas o próximo passo é inegociável. 😉", "Ok, Próxima Pergunta");
+            
+            // Oculta Q2 e exibe Q3 após o modal ser fechado
+            document.querySelector('#modal-nao button').onclick = () => {
+                closeModal();
+                q2Section.classList.add('opacity-0');
+                setTimeout(() => {
+                    q2Section.classList.add('hidden');
+                    showNextQuestion(q3Section);
+                }, 300);
+            };
+        }
+
+        /**
+         * Q3: Construir uma família maior?
+         */
+        function handleQ3Yes() {
+            // Oculta Q3
+            q3Section.classList.add('opacity-0');
+            setTimeout(() => {
+                q3Section.classList.add('hidden');
+                // Exibe Q4
+                showNextQuestion(q4Section);
+            }, 300);
+        }
+        
+        function handleQ3No() {
+            // Oculta Q3
+            q3Section.classList.add('opacity-0');
+            setTimeout(() => {
+                q3Section.classList.add('hidden');
+                // Exibe Q4
+                showNextQuestion(q4Section);
+            }, 300);
+        }
+
+        /**
+         * Q4: Gostaria de se casar comigo? (O GRANDE MOMENTO)
+         */
+        function handleQ4Yes() {
+            // Oculta Q4
+            q4Section.classList.add('opacity-0');
+            setTimeout(() => {
+                q4Section.classList.add('hidden');
+                // Exibe Formulário de Votos
+                showNextQuestion(vowsFormSection);
+            }, 300);
+        }
+
+        function handleQ4No() {
+            showModal("💔", "Não?", "Ah... não. Essa não é a resposta que eu esperava. 😥 Eu ainda tenho esperança que você mude de ideia!");
+        }
+
+        // --- Funções Auxiliares ---
+
+        /**
+         * Exibe a próxima seção e rola para ela.
+         */
+        function showNextQuestion(sectionElement) {
+            sectionElement.classList.remove('hidden');
+            sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => {
+                sectionElement.classList.remove('opacity-0');
+            }, 50);
+        }
+
+        /**
+         * Abre o modal com conteúdo personalizado.
+         */
+        function showModal(emoji, title, body, buttonText = "Fechar") {
+            document.getElementById('modal-emoji').textContent = emoji;
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-body').textContent = body;
+            document.querySelector('#modal-nao button').textContent = buttonText;
+            document.querySelector('#modal-nao button').onclick = closeModal; // Reset
+            
+            modalNao.classList.remove('hidden');
+            const modalContent = modalNao.querySelector('div');
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-105');
+            setTimeout(() => {
+                modalContent.classList.add('scale-100');
+                modalContent.classList.remove('scale-105');
+            }, 50);
+        }
+
+        /**
+         * Fecha o modal.
+         */
+        function closeModal() {
+            modalNao.classList.add('hidden');
+        }
+
+
+        /**
+         * Prepara e envia os votos via WhatsApp.
+         */
+        function sendVows() {
+            const vows = vowsTextarea.value.trim();
+            const vowsTitle = "MEUS VOTOS: EU ACEITO!";
+
+            if (vows.length === 0) {
+                showModal("🤔", "Ops!", "Você precisa escrever algo antes de enviar seus votos! O seu SIM é importante demais!", "Entendi");
+                return;
+            }
+
+            // Corpo da mensagem WhatsApp
+            // Inclui o título e os votos
+            const whatsappText = `*${vowsTitle}*\n\n--- Meus Votos ---\n\n${vows}\n\n-----------------\n\nEu te amo! Mal posso esperar pelo nosso futuro.`;
+
+            // Cria o link do WhatsApp (requer o número sem formatação e o texto URI-encoded)
+            // A função replace garante que apenas números sejam usados, crucial para o wa.me
+            const cleanNumber = whatsappNumber.replace(/[^0-9]/g, ''); 
+            const whatsappLink = `https://wa.me/${cleanNumber}?text=${encodeURIComponent(whatsappText)}`;
+
+            // Abre o WhatsApp
+            window.location.href = whatsappLink;
+        }
+
+    </script>
+</body>
+</html>
+
